@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>About me</title>
+  </head>
+  <body>
+    <div class="navBar">
+      <a href="anime.html">Favorite Animes</a>
+      <a href="gamer.html">Favorite Games</a>
+      <a href="index.html">Home</a>
+    </div>
+    <div class="gaming">
+      <br>
+      <div class="favoriteGames">
+      <div class="slideshow">
+        <img name="Slide" width="500" height="300">
+      </div>
+      <h1>These are the games that i usually play,<br>
+        they are really fun and not too hard for me</h1>
+    </div>
+    </div>
+
+
+    <script>
+    var i = 0;
+    var images = [];
+    var time = 2000;
+
+    images[0] = 'stuffs/osugame.png';
+    images[1] = 'stuffs/genshin.png';
+    images[2] = 'stuffs/tboi.png';
+
+    function changeImg() {
+      document.Slide.src = images[i];
+
+      if (i < images.length -1) {
+        i++;
+      } else {
+        i = 0;
+      }
+
+      setTimeout("changeImg()", time);
+    }
+
+  window.onload = changeImg;
+    </script>
+  </body>
+</html>
